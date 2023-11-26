@@ -1,0 +1,30 @@
+/* Enter your custom styles here */
+
+.preenchimentoBox{
+ background-color: black;
+}
+
+.corTextoBox{
+    color: white;
+}
+
+.rodapeTexto{
+ position:relative;
+top:-60px;
+left: 10px;
+margin-bottom: 5px;
+
+}
+
+.siNopse{
+    position:relative;
+   top:-60px;   
+   margin-bottom: 5px;
+   
+   }
+
+.margemLogo{
+position:relative;
+top:-60px;
+left: 60px;
+}

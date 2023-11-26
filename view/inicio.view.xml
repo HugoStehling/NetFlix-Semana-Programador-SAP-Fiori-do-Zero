@@ -1,0 +1,39 @@
+<mvc:View controllerName="netflix.netflix.controller.inicio"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:layout="sap.ui.layout"    
+    xmlns="sap.m">
+    <Page id="page" title="Netflix com SAPUI5">
+        <subHeader >
+            <Toolbar  id="_IDGenToolbar1">
+            <Link id="_IDGenLink1"  text="{ModeloMenu>/primeiro}" press="onPressLinkInicio"/>
+            <Link id="_IDGenLink2"  text="{ModeloMenu>/segundo}" press="onPressLinkSeries"/>
+            <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+            <SearchField id="inputBuscar" width="30%" search="onApertarBuscar"  >            
+            </SearchField>
+            </Toolbar>
+             </subHeader>
+             <content />
+
+             <content>
+                <layout:Grid id="_IDGenGrid1" content="{APIFilmes>/titles}" >
+                    <VBox   id="_IDGenVBox1" class="preenchimentoBox"  width="300px" height="400px">
+                        <Image id="_IDGenImage1" src="{APIFilmes>jawSummary/backgroundImage/url}" width="100%" height="100%" />
+                       
+                          
+                                <Image
+                                  id="_IDGenImage21"
+                                  src="{APIFilmes>jawSummary/logoImage/url}"
+                                  class="margemLogo"
+                                  width="65%"
+                                  height="65%" />
+                    
+                        <Text class="corTextoBox rodapeTexto" id="_IDGenText1"   text="{APIFilmes>jawSummary/title}"/>
+                        <Text class="corTextoBox rodapeTexto" id="_IDGenText5"   text="{APIFilmes>jawSummary/numSeasonsLabel}"/>
+                        <Text class="corTextoBox  siNopse" id="_IDGenText2"   text="{APIFilmes>jawSummary/synopsis}"/>
+                        <Text class="corTextoBox rodapeTexto" id="_IDGenText3"   text="{APIFilmes>jawSummary/genres/1/name}"/>
+                        <Text class="corTextoBox rodapeTexto" id="_IDGenText4"   text="{AAPIFilmes>jawSummary/genres/2/name}"/>
+                    </VBox>
+             </layout:Grid>
+             </content>
+    </Page>
+</mvc:View>
